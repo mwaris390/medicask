@@ -1,50 +1,46 @@
-# Welcome to your Expo app 👋
+# 🩺 MedicAsk – Your AI Medical Info Assistant
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+**MedicAsk** is an AI-powered mobile application built with **Expo React Native** that allows users to query detailed medicine information — either via **text** or by capturing a **photo** of the medicine. Think of it as **ChatGPT, but for medicines**.
 
-## Get started
+> 🚀 Ask about ingredients, effects, usage, and availability – using text or just a snapshot of your medicine!
 
-1. Install dependencies
+---
 
+## ✨ Features
+
+- 🤖 **AI-powered Q&A** – Ask medicine-related questions via text.
+- 📸 **Camera Integration** – Take a photo of medicine using **Expo Camera**.
+- 🧠 **Image Recognition** – Identify medicine through packaging/image using **OpenGVLab model**.
+- 🧾 **Text-to-AI** – Use the **Qwen 3 model** from OpenRouter for accurate medical responses.
+- 💾 **Base64 Conversion** – Images are converted to Base64 using **Expo FileSystem** for AI processing.
+
+---
+
+## 📱 Tech Stack
+
+| Technology       | Purpose                                |
+|------------------|----------------------------------------|
+| Expo React Native| Mobile app framework                   |
+| Expo Camera      | Taking medicine images                 |
+| Expo FileSystem  | Converting captured images to Base64   |
+| OpenRouter API   | Free Qwen 3 model for text queries     |
+| OpenGVLab        | AI model for medicine image recognition|
+
+---
+
+## 🧰 Installation & Setup
+
+1. **Clone the repository:**
    ```bash
+   git clone https://github.com/mwaris390/medicask.git
+   cd medicask
+2. **Install dependencies:**
+   ```node
    npm install
-   ```
+   npx expo start
+3. **Configure API keys**
 
-2. Start the app
-
-   ```bash
-    npx expo start
-   ```
-
-In the output, you'll find options to open the app in a
-
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
-
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
-
-## Get a fresh project
-
-When you're ready, run:
-
-```bash
-npm run reset-project
-```
-
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
-
-## Learn more
-
-To learn more about developing your project with Expo, look at the following resources:
-
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
-
-## Join the community
-
-Join our community of developers creating universal apps.
-
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+   Create a .env file in the root with your API keys
+   ```env
+   OPENROUTER_API_KEY=your_openrouter_key
+   OPENGVLAB_API_KEY=your_opengvlab_key
